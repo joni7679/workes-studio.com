@@ -30,7 +30,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 99;
-    display: none;
+    /* display: none; */
 }
 
 .loader h1 {
@@ -54,6 +54,11 @@ body {
     z-index: 7;
 }
 
+#nav-icon {
+    font-size: 3vw;
+    cursor: pointer;
+}
+
 .loader video {
     height: 100%;
     width: 100%;
@@ -74,6 +79,30 @@ nav {
 
 nav svg path {
     fill: #030101;
+}
+
+.nav-part-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    margin-top: 35px;
+
+    transition: all 0.3s linear;
+}
+
+.nav-icon {
+    margin-top: 35px;
+    transition: all 0.3s linear;
+
+}
+
+.hide-nav-link {
+    margin-top: 35px;
+    opacity: 0;
+    margin-right: 50px;
 }
 
 .nav-part-2 a {
@@ -119,16 +148,17 @@ nav svg path {
     cursor: pointer;
 }
 
-/* .elem .blur {
+/* .elem .moving-animation .blur {
     position: absolute;
     width: 50%;
-    height: 35%;
-    background-color: linear-gradient(to right, rgb(218, 218, 17), #f5e418, #f5e31bf6);
-    box-shadow: 10px 0 20px 20px #f5e418;
+    height: 100%;
+    background-color: red;
+    /* background-color: linear-gradient(to right, rgb(218, 218, 17), #f5e418, #f5e31bf6); */
+    /* box-shadow: 10px 0 20px 20px #f5e418;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    z-index: 7;
+    z-index: 7; 
 } */
 
 
@@ -296,6 +326,37 @@ nav svg path {
 .footer-top h2 {
     font-weight: 500;
     color: #464343;
+}
+
+.footer-bottom {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.footer-bottom .footer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer-bottom .footer-box a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2vw;
+    margin: 0 -.45rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.footer-bottom .footer-box a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+    transition: all 0.4s linear;
 }
 
 /* media query code */

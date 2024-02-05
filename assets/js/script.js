@@ -28,6 +28,18 @@ function loadingAnimation() {
 }
 loadingAnimation()
 
+let navBarIcon = document.getElementById("nav-icon");
+let navlinks = document.querySelector(".nav-links");
+// let nav = document.querySelectorAll(".nav-link")
+navBarIcon.addEventListener("click", () => {
+    // Toggle the class to open/close the navigation
+    navlinks.classList.toggle("open");
+    navBarIcon.classList.toggle("nav-icon");
+    nav.classList.toggle("hide-nav-link");
+
+
+});
+
 const scroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true,
@@ -37,23 +49,29 @@ const scroll = new LocomotiveScroll({
 
 // })
 
-let backToTop = document.querySelector(".footer-top .back-to-top ");
-backToTop.addEventListener("click", () => {
-    // console.log("hello joni")
-    scroll.scrollTo(0)
-
-})
-
-let elemBoxs = document.querySelectorAll(".elem");
-let studioSetion = document.querySelector(".studio-section")
-elemBoxs.forEach((el) => {
-    // console.log(el)
-    el.addEventListener("mouseenter", () => {
-        let bgimg = el.getAttribute("data-img");
-        // console.log(bgimg)
-        studioSetion.style.backgroundImage = `url(${bgimg})`;
-
+function backToTop() {
+    let backToTop = document.querySelector(".footer-top .back-to-top ");
+    backToTop.addEventListener("click", () => {
+        // console.log("hello joni")
+        scroll.scrollTo(0)
 
     })
+}
+backToTop()
 
-})
+function ElemEffect() {
+    let elemBoxs = document.querySelectorAll(".elem");
+    let studioSetion = document.querySelector(".studio-section")
+    elemBoxs.forEach((el) => {
+        // console.log(el)
+        el.addEventListener("mouseenter", () => {
+            let bgimg = el.getAttribute("data-img");
+            // console.log(bgimg)
+            studioSetion.style.backgroundImage = `url(${bgimg})`;
+
+
+        })
+
+    })
+}
+ElemEffect()
