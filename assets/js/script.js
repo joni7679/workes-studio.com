@@ -28,17 +28,17 @@ function loadingAnimation() {
 }
 loadingAnimation()
 
-let navBarIcon = document.getElementById("nav-icon");
-let navlinks = document.querySelector(".nav-links");
-// let nav = document.querySelectorAll(".nav-link")
-navBarIcon.addEventListener("click", () => {
-    // Toggle the class to open/close the navigation
-    navlinks.classList.toggle("open");
-    navBarIcon.classList.toggle("nav-icon");
-    nav.classList.toggle("hide-nav-link");
+// let navBarIcon = document.getElementById("nav-icon");
+// let navlinks = document.querySelector(".nav-links");
+// // let nav = document.querySelectorAll(".nav-link")
+// navBarIcon.addEventListener("click", () => {
+//     // Toggle the class to open/close the navigation
+//     navlinks.classList.toggle("open");
+//     navBarIcon.classList.toggle("nav-icon");
+//     nav.classList.toggle("hide-nav-link");
 
 
-});
+// });
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
@@ -75,3 +75,9 @@ function ElemEffect() {
     })
 }
 ElemEffect()
+
+let navLinks = document.querySelector(".nav-links");
+let navIcon = document.getElementById("nav-icon");
+navIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("show-nav-links");
+});
